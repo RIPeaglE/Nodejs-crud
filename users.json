@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "firstName": "Tayfun",
+    "lastName": "Olgun",
+    "username": "TayTay",
+    "birthday": "2023-11-10",
+    "occupation": "Master",
+    "userImage": "userImage-1701258117208.webp"
+  },
+  {
+    "id": 2,
+    "firstName": "Linus",
+    "lastName": "Toma",
+    "username": "Lito",
+    "birthday": "2023-11-09",
+    "occupation": "Student",
+    "userImage": "userImage-1701258249748.png"
+  }
+]

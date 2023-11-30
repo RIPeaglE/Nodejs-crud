@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/view.css">
+  <title>View Users</title>
+</head>
+<body>
+  <h1>Users List</h1>
+  <div class="container">
+    <div class="users">
+        <% for (let i = 0; i < users.length; i++) {%>
+            <a href="/editusers?id=<%=users[i].id %>" id="user">
+                <div class="card">
+                    <div class="image">
+                        <% if (users[i].userImage) { %>
+                            <img src="/uploads/<%= users[i].userImage.toLowerCase() %>" alt="users picture">
+                        <% } else { %>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20vw" height="14vw" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        <% } %>
+                    </div>
+                    <div class="info">
+                        <div class="firstName">
+                            <p>
+                                <%= users[i].firstName %> <%= users[i].lastName %>
+
+                            </p>
+                        </div>
+                        <div class="username">
+                            <p>
+                                <%= users[i].username %>
+                            </p>
+                        </div>
+                        <div class="birthday">
+                            <p>
+                                <%= users[i].birthday %>
+                            </p>
+                        </div>
+                        <div class="occupation">
+                            <p>
+                                <%= users[i].occupation %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+  </div>
+</body>
+</html>
